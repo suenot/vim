@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/suenot/ssdwork/concert/app/blocks/header'
+let g:netrw_dirhist_2='/Users/suenot/ssdwork/T-80'
+let g:netrw_dirhist_3='/Users/suenot/ssdwork/concert/app'
+let g:netrw_dirhist_4='/Users/suenot/ssdwork/concert/app/blocks'
+let g:netrw_dirhist_5='/Users/suenot/ssdwork/concert/app/blocks/breadcrumb'
+let g:netrw_dirhist_6='/Users/suenot'
+let g:netrw_dirhist_7='/Users/suenot/Desktop'
+let g:netrw_dirhist_8='/Users/suenot'

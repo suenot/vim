@@ -1,0 +1,22 @@
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-vinegar'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'L9'
+Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'rking/ag.vim'
+Plugin 'skwp/greplace.vim'
+Plugin 'file:///Users/suenot/.vim/bundle/vim-peepopen'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'tpope/vim-surround'
+Plugin 'ervandew/supertab'
+Plugin 'wakatime/vim-wakatime'
+Plugin 'lyokha/vim-xkbswitch'
+call vundle#end()
+filetype plugin indent on
