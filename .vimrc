@@ -71,7 +71,7 @@ set foldcolumn=0
 hi foldcolumn guibg=bg
 hi vertsplit guifg=bg guibg=bg
 
-" ============НАСТРОЙКА КЛАВИАТУРЫ И МЫШИ============
+" Keyboard and mouse
 " XkbSwitch
 let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.dylib'
 let g:XkbSwitchEnabled = 1
@@ -79,3 +79,24 @@ let g:XkbSwitchIMappings = ['ru']
 let g:XkbSwitchSkipIMappings = { '*' : ['[', ']', '{', '}', "'", '<', '>', ',', '.', '"'] }
 "set keymap=russian-jcukenwin iminsert=0 imsearch=-1
 "highlight lCursor guifg=NONE guibg=Red
+
+" Comments hack for .vue
+let g:ft = ''
+function! NERDCommenter_before()
+  if &ft == 'vue'
+    let g:ft = 'vue'
+    let stack = synstack(line('.'), col('.'))
+    if len(stack) > 0
+      let syn = synIDattr((stack)[0], 'name')
+      if len(syn) > 0
+        exe 'setf ' . substitute(tolower(syn), '^vue_', '', '')
+      endif
+    endif
+  endif
+endfunction
+function! NERDCommenter_after()
+  if g:ft == 'vue'
+    setf vue
+    let g:ft = ''
+  endif
+endfunction
