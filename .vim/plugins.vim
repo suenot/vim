@@ -19,5 +19,6 @@ Plugin 'wakatime/vim-wakatime'
 Plugin 'lyokha/vim-xkbswitch'
 Plugin 'posva/vim-vue'
 Plugin 'https://github.com/digitaltoad/vim-pug.git'
+Plugin 'scrooloose/nerdcommenter'
 call vundle#end()
 filetype plugin indent on
