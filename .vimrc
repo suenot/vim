@@ -1,6 +1,6 @@
 set nocompatible
 so ~/.vim/plugins.vim
-set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+"set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 set tabstop=4
 set expandtab 
 set softtabstop=4
@@ -14,7 +14,7 @@ set backspace=indent,eol,start
 let mapleader=','
 set linespace=15
 set guifont=Fira\ Code:h18
-set macligatures
+"set macligatures
 set guioptions-=e
 set guioptions-=l
 set guioptions-=L
@@ -26,7 +26,7 @@ set incsearch
 "split management"
 set splitbelow
 set splitright
-nmap <D-1> :NERDTreeToggle<cr>
+nmap <D-m> :NERDTreeToggle<cr>
 nmap <D-p> :CtrlP<cr>
 nmap <c-R> :CtrlPBufTag<cr>
 nmap <D-e> :CtrlPMRUFiles<cr>
@@ -100,3 +100,10 @@ function! NERDCommenter_after()
     let g:ft = ''
   endif
 endfunction
+
+function! StartUp()
+  if 0 == argc()
+    NERDTree
+  end
+endfunction
+autocmd VimEnter * call StartUp()
